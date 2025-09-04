@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
+// Import the housing-location component so we can use <app-housing-location>
 import { HousingLocation } from '../housing-location/housing-location'; 
 import { CommonModule } from '@angular/common';
 
 
 @Component({
+  // Home component that groups search + results
   selector: 'app-home',
+  // Standalone component (no NgModule declaration required)
   standalone: true,
+  // Import CommonModule for basic directives and the child component
   imports: [CommonModule, HousingLocation],
   template: `
     <section>

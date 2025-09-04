@@ -2,7 +2,9 @@ import {Component} from '@angular/core';
 import { Home } from './home/home';
 
 @Component({
+  // Root component selector — this is the app entry point (<app-root>)
   selector: 'app-root',
+  // standalone allows bootstrapping without an NgModule
   standalone: true,
   template: `
     <main>
