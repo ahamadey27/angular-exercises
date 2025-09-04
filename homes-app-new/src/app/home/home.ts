@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 // Import the housing-location component so we can use <app-housing-location>
 import { HousingLocation } from '../housing-location/housing-location'; 
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgForOf } from '@angular/common';
 import { HousingLocationInterface } from '../housing-location-interface';
 
 
@@ -11,7 +11,7 @@ import { HousingLocationInterface } from '../housing-location-interface';
   // Standalone component (no NgModule declaration required)
   standalone: true,
   // Import CommonModule for basic directives and the child component
-  imports: [CommonModule, HousingLocation],
+  imports: [CommonModule, NgForOf, HousingLocation],
   template: `
     <section>
       <form>
@@ -22,6 +22,7 @@ import { HousingLocationInterface } from '../housing-location-interface';
     <section class="results">
       <!-- render each housing item and pass it to the child component -->
       <div class="results-grid">
+        <!-- use a short loop variable name to avoid shadowing and help editor tooling -->
         <app-housing-location *ngFor="let loc of housingLocationList" [housingLocation]="loc"></app-housing-location>
       </div>
     </section>
