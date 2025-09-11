@@ -9,3 +9,9 @@
 } @else {
     <p>No Products Found</p>
 }
+
+<ul class="pill-group">
+    @for (product of products; track product.id) {
+        <li class="pill">{{product.title}}</li>
+    }
+</ul>
