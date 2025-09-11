@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-@Component({
+@Component({ //Angular decorator that defines properties of component. 
   selector: 'app-root',
   imports: [RouterOutlet],
   templateUrl: './app.html',
