@@ -1,2 +1,12 @@
-<p>product-list works!</p>
-<p>TESTING</p>
+
+<!--products are listed on the screen when products array is not empty-->
+@if (products.length > 0) {
+    <h1>Products ({{products.length}})</h1>
+} @else if (products.length === 100) {
+    <span>
+        Click <a>Load More</a> to see more products
+    </span>
+}
+ @else {
+    <p>No Products Found</p>
+}
