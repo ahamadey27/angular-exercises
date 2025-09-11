@@ -7,6 +7,7 @@ import { Product } from '../product';
   templateUrl: './product-detail.html',
   styleUrl: './product-detail.css'
 })
-export class ProductDetail {
 
+export class ProductDetail {
+  product = input.required<Product>();
 }
