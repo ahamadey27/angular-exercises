@@ -19,4 +19,6 @@ export class ProductList {
     {id: 4, title: 'Tablet'}
   ]; 
 
+  selectedProduct: Product | undefined;
+
 }
